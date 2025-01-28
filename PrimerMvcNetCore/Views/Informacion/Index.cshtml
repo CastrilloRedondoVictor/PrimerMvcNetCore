@@ -11,4 +11,10 @@
 			Controlador ----> Vista(Model)
 		</a>
 	</li>
+	<li>
+		@Html.ActionLink("Vista Controller GET", "VistaControllerGet", "Informacion", new {saludo = "Hola, Víctor", year = 2025})
+	</li>
+	<li>
+		@Html.ActionLink("Vista Controller GET Sin saludo", "VistaControllerGet", "Informacion", new { year = 2025 })
+	</li>
 </ul>

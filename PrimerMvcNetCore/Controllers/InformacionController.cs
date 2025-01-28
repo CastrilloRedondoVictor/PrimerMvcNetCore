@@ -26,8 +26,16 @@ namespace PrimerMvcNetCore.Controllers
         }
 
         [HttpGet]
-        public IActionResult VistaControllerGet()
+        public IActionResult VistaControllerGet
+            (string saludo, int year)
         {
+            if(saludo != null)
+            {
+                ViewData["data"] = saludo + " en el año " + year;
+            } else
+            {
+                ViewData["data"] = "Aquí nadie saluda ya...";
+            }
             return View();
         }
     }
