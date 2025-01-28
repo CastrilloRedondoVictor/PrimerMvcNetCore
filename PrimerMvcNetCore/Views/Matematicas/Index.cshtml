@@ -1,0 +1,27 @@
+﻿<h1>Menú de matemáticas</h1>
+
+<ul>
+	@* <li>
+		<a asp-controller="Informacion" asp-action="ControladorVista">
+			Controlador ----> Vista
+		</a>
+	</li> *@
+	<li>
+		@Html.ActionLink("Suma 8 + 5 GET", "MatematicasControllerGet", "Matematicas", new { num1 = 8, num2 = 5 })
+	</li>
+	<li>
+		@Html.ActionLink("Suma POST", "MatematicasControllerPost", "Matematicas")
+	</li>
+	<li>
+		<a asp-controller="Matematicas"
+			asp-action="SumarPost">
+			Test Post
+		</a>
+	</li>
+	<li>
+		@Html.ActionLink("Conjetura Collatz", "ConjeturaCollatz", "Matematicas")
+	</li>
+	<li>
+		@Html.ActionLink("Tabla de multiplicar", "TablaMultiplicar", "Matematicas")
+	</li>
+</ul>

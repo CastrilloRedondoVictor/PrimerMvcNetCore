@@ -29,12 +29,12 @@ namespace PrimerMvcNetCore.Controllers
         public IActionResult VistaControllerGet
             (string saludo, int year)
         {
-            if(saludo != null)
+            if(year != null)
             {
                 ViewData["data"] = saludo + " en el año " + year;
             } else
             {
-                ViewData["data"] = "Aquí nadie saluda ya...";
+                ViewData["data"] = "Aquí no tenemos año...";
             }
             return View();
         }
