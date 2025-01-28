@@ -1,0 +1,23 @@
+﻿
+
+@{
+	int valor = 12;
+	string texto = "Hoy es lunes";
+
+	valor += 1;
+	texto += " y mañana martes";
+}
+
+<h2>Texto: @texto, Número: @valor</h2>
+
+@if(valor > 0){
+	texto = "positivo";
+	<h3 style="color:green;">@texto</h3>
+}
+else
+{
+	texto = "negativo";
+	<h3 style="color:red;">@texto</h3>
+}
+
+@Html.ActionLink("aaa", "PrimeraPagina", "Prueba")
